@@ -71,15 +71,14 @@ class Plane(pygame.sprite.Sprite):
 		self.mask = pygame.mask.from_surface(self.image)
 
 		# sound
-		self.jump_sound = pygame.mixer.Sound(os.path.join(sourceFileDir,'../sounds/jump.wav'))
+		self.jump_sound = pygame.mixer.Sound(os.path.join(sourceFileDir,'../sounds/57.wav'))
 		self.jump_sound.set_volume(0.3)
 
 	def import_frames(self,scale_factor):
 		self.frames = []
-		for i in range(3):
-			surf = pygame.image.load(os.path.join(sourceFileDir, f'../graphics/plane/red{i}.png')).convert_alpha()
-			scaled_surface = pygame.transform.scale(surf,pygame.math.Vector2(surf.get_size())* scale_factor)
-			self.frames.append(scaled_surface)
+		surf = pygame.image.load(os.path.join(sourceFileDir, f'../graphics/plane/fighter.png')).convert_alpha()
+		scaled_surface = pygame.transform.scale(surf,pygame.math.Vector2(surf.get_size())* scale_factor)
+		self.frames.append(scaled_surface)
 
 	def apply_gravity(self,dt):
 		self.direction += self.gravity * dt

@@ -44,7 +44,7 @@ class Game:
 		self.menu_rect = self.menu_surf.get_rect(center = (WINDOW_WIDTH / 2,WINDOW_HEIGHT / 2))
 
 		# music 
-		self.music = pygame.mixer.Sound(os.path.join(sourceFileDir, '../sounds/music.wav'))
+		self.music = pygame.mixer.Sound(os.path.join(sourceFileDir, '../sounds/60.wav'))
 		self.music.play(loops = -1)
 
 	def collisions(self):
